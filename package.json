@@ -1,0 +1,22 @@
+{
+  "name": "js-seis-interp",
+  "version": "0.0.1",
+  "description": "Seismic interp in javascript",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server src -oi"
+  },
+  "author": "wassname",
+  "license": "MIT",
+  "devDependencies": {
+      "fs": "0.0.2",
+      "concurrent-transform": "^1.0.0",
+      "gulp-awspublish": "^3.0.1",
+      "gulp-debug": "^2.1.2",
+      "gulp-rename": "^1.2.2",
+      "gulp-util": "^3.0.7"
+  }
+}

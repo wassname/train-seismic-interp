@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>interpret synthetic seismic</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.4/dc.css" />
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css"> -->
+    <link rel="stylesheet" href="css/colorbrewer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <h1>
+      Click the image to interpret the synthetic seismic
+      </h1>
+    <button id="undo">Undo</button>
+    <!-- <button id="reset">Reset</button> -->
+    <button id="toggleModel" disabled>Toggle Seismic/VModel </button>
+    <button id="Finish">Finish</button>
+    <span style="">-</span>
+
+
+
+    <div id="svg" class="Paired seismic-container">
+    </div>
+
+
+    <div class="error-graph">
+        <div class="" id="interp-error-chart">
+
+        </div>
+    </div>
+
+    <!-- Show raw data here -->
+    <div class="">
+        <label>Error</label>
+        <textbox id="score">N/A</textbox>
+        (meters squared per meter)
+    </div>
+
+    <svg height=110 width=170  id="svg-color-ordinal"></svg>
+
+
+
+
+    <div class="">
+        <h2>Instructions</h2>
+        <ol>
+            <li>
+                Click the image to interpret the blue line
+            </li>
+            <li>Click finish to see how much error you had</li>
+        </ol>
+
+        <h2>FAQ</h2>
+
+        <strong>How do you know where the true horizon is? Isn't it subjective</strong> This is synthetic seismic produced from a velocity model, so we know the real location of horizons, letting us get real feedback on our interpreation. To see the velocity model click "Toggle Seismic/VModel" after you have finished.
+    </div>
+
+    <div class="">
+        <h4>
+            Horizon data:
+        </h4>
+        <textbox id="interp"></textbox>
+    </div>
+
+    <hr />
+
+
+    <div>
+        <p>
+            <small>Synthetic seismic data from <a href="#ref-1">[1]</a></small>
+        </p>
+    </div>
+
+    <small><h4>References:</h4>
+        <ol>
+        <li id="ref-1">"The Marmousi2 Model, Elastic Synthetic Data, and an Analysis of Imaging and AVO in a Structurally Complex Environment", <a href="http://www.agl.uh.edu/downloads/downloads.htm">Gary Martin, 2004, Thesis.</a></li>
+    </ol></small>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.4/dc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.13.0/d3-legend.js"></script>
+    <!-- app -->
+    <script src="js/seismic-plot.js"></script>
+    <script src="js/error-plot.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

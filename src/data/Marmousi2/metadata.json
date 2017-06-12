@@ -1,0 +1,10 @@
+{
+    "source": "'The Marmousi2 Model, Elastic Synthetic Data, and an Analysis of Imaging and AVO in a Structurally Complex Environment', Gary Martin, 2004, Thesis.",
+    "model":"MODEL_P-WAVE_VELOCITY_1.25m.png",
+    "seismic": "SYNTHETIC.png",
+    "xinterval": 1.25,
+    "xunit": "m",
+    "yint": 5,
+    "yunit": "m",
+    "horizons": "FINAL_HORIZONS.json"
+}

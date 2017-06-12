@@ -1,0 +1,66 @@
+.seismic-container svg {
+    /*border: 1px solid grey;*/
+}
+.seismic-container {
+    /* to match error chart */
+    /*margin-left: 70px;*/
+    /*margin-right: 50px*/
+}
+
+#score {
+    font-style: italic;
+}
+
+#interp {
+    font-size: small;
+    display: block;
+    border: 1px solid grey;
+}
+
+svg .line {
+    stroke-width: 2px;
+    stroke-linecap: round;
+    fill: none;
+    /*opacity: 0.7;*/
+}
+svg .line.interp {
+    /**/
+}
+
+
+
+svg .line.ideal-horizon {
+    stroke-dasharray: 5,5;
+}
+
+/* this show the error between the interp and ideal answer */
+svg .line.error {
+    /*stroke: green;*/
+    stroke-width: 2px;
+    stroke-linecap: round;
+
+    fill: yellow;
+    opacity: 0.4;
+}
+
+svg .well-trace {
+    stroke-width: 2;
+    stroke: red;
+    fill: none;
+}
+svg .well .label {}
+
+svg .well-top {
+    stroke-width: 4px;
+    opacity: 50%;
+    /*stroke-dasharray: 1, 5;*/
+}
+
+svg .axis path,
+svg .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+svg .axis.x .label {}
+svg .axis.y .label {}
